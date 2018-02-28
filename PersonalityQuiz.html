@@ -1,0 +1,436 @@
+<!doctype html>
+<html>
+<head>
+  <title>Personality Summary Quiz</title>
+  <style>
+  /*
+    Sixiong Yang
+    si623524
+    2/26/2018
+    Project 1
+  */
+
+  /*  use @media for media queries for phone, tablets, etc.
+      images per question
+      slick form design
+      more than 10 questions for the quiz
+      results depend on the answer inputs
+      final result include a final image plus a basic summary of events/Results
+      creativity!!!!
+  */
+      body {
+        background-image: url("https://wallpaperlayer.com/img/2015/1/blurred-7596-7890-hd-wallpapers.jpg");
+        background-attachment: fixed;
+        font-family: "Segoe Print","Segoe UI",Helvetica,sans-serif;
+        color: #38373E;
+        font-size: 12px;
+      }
+      .container {
+        box-shadow: 0px 5px 55px 0 rgba(0,0,0,0.65);
+        margin: 0px auto ;
+        max-width: 550px;
+        height: auto;
+        background: #F0F1EB;
+      }
+      .header {
+        background: #38373E;
+      }
+      .result {
+        box-shadow: 0px 10px 40px 0 rgba(0,0,0,0.35);
+        margin: 0px auto ;
+        max-width: 550px;
+        height: auto;
+        background: #D7A15D;
+      }
+
+
+      input[type="button"]{
+        font-family: inherit;
+        font-size: 35px;
+        -webkit-appearance: none;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        background-color:#A59484;
+        border: 0;
+        height: 65px;
+        width: 550px;
+      }
+      input[type="button"]:hover{
+        box-shadow: 0 12px 40px 0 rgba(0,0,0,0.24), 0 20px 80px 0 rgba(0,0,0,0.50);
+        background-color: #D7A15D;
+        color: #F0F1EB;
+      }
+
+      h1{
+        text-align: center;
+        margin-top: 15px;
+        font-size: 26px;
+        color: #F0F1EB;
+      }
+      span{
+        font-size: 20px;
+        color: #38373E;
+      }
+      span a{
+        font-size: 16px;
+        color: #D7A15D;
+      }
+      img {
+        width: 90%
+        max-width: 600px;
+      }
+      .divider {
+        height: 10px;
+	      border: 0;
+	      box-shadow: 0 20px 20px -10px #D7A15D inset;
+      }
+
+      input[type="radio"]{
+        vertical-align: middle;
+        margin-left: 40px;
+      }
+
+      .imagescroll {
+          background-image: url("https://wallpaperlayer.com/img/2015/1/blurred-7596-7890-hd-wallpapers.jpg");
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 200%;
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          -webkit-background-size: cover;
+          background-size: cover;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="imagescroll" id="iscroll">
+  <div class="container">
+    <div class="header">
+    <h1><br>Personality Summary Quiz</h1>
+    <hr class="divider">
+  </div>
+  <form>
+    <!-- for final image <img src="https://images-na.ssl-images-amazon.com/images/I/81ep8rBNqFL._SL1500_.jpg">-->
+
+    <blockquote>
+      <br><span>Q1. <a>What color is your favorite?</a></span></br>
+      <input type="radio" name="Q1" id="white" value="white">
+      <label for="white">white</label>
+      <br>
+      <input type="radio" name="Q1" id="red" value="red">
+      <label for="red">red</label>
+      <br>
+      <input type="radio" name="Q1" id="blue" value="blue">
+      <label for="blue">blue</label>
+      <br>
+      <input type="radio" name="Q1" id="green" value="green">
+      <label for="green">green</label>
+
+      <br><br><span>Q2. <a>What is your favorite animal?</a></span></br>
+      <input type="radio" name="Q2" id="dog" value="dog">
+      <label for="dog">dog</label>
+      <br>
+      <input type="radio" name="Q2" id="cat" value="cat">
+      <label for="cat">cat</label>
+      <br>
+      <input type="radio" name="Q2" id="cow" value="cow">
+      <label for="cow">cow</label>
+      <br>
+      <input type="radio" name="Q2" id="rabbit" value="rabbit">
+      <label for="rabbit">rabbit</label>
+
+      <br><br><span>Q3. <a>What is your favorite pattern?</a></span></br>
+      <input type="radio" name="Q3" id="spirals" value="spirals">
+      <label for="spirals">spirals</label>
+      <br>
+      <input type="radio" name="Q3" id="lines" value="lines">
+      <label for="lines">lines</label>
+      <br>
+      <input type="radio" name="Q3" id="circles" value="circles">
+      <label for="circles">circles</label>
+      <br>
+      <input type="radio" name="Q3" id="fractals" value="fractals">
+      <label for="fractals">fractals</label>
+
+      <br><br><span>Q4. <a>What subject in school is your favorite?</a></span></br>
+      <input type="radio" name="Q4" id="math" value="math">
+      <label for="math">math</label>
+      <br>
+      <input type="radio" name="Q4" id="english" value="english">
+      <label for="english">english</label>
+      <br>
+      <input type="radio" name="Q4" id="art" value="art">
+      <label for="art">art</label>
+      <br>
+      <input type="radio" name="Q4" id="science" value="science">
+      <label for="science">science</label>
+
+      <br><br><span>Q5. <a>Do you have a favorite shape?</a></span></br>
+      <input type="radio" name="Q5" id="square" value="square">
+      <label for="square">square</label>
+      <br>
+      <input type="radio" name="Q5" id="triangle" value="triangle">
+      <label for="triangle">triangle</label>
+      <br>
+      <input type="radio" name="Q5" id="polygon" value="polygon">
+      <label for="polygon">polygon</label>
+      <br>
+      <input type="radio" name="Q5" id="none" value="none">
+      <label for="none">none</label>
+
+      <br><br><span>Q6. <a>What landscape do you want to venture to?</a></span></br>
+      <input type="radio" name="Q6" id="mountains" value="mountains">
+      <label for="mountains">mountains</label>
+      <br>
+      <input type="radio" name="Q6" id="parks" value="parks">
+      <label for="parks">parks</label>
+      <br>
+      <input type="radio" name="Q6" id="deserts" value="deserts">
+      <label for="deserts">deserts</label>
+      <br>
+      <input type="radio" name="Q6" id="rainforests" value="rainforests">
+      <label for="rainforests">rainforests</label>
+
+      <br><br><span>Q7. <a>Do you have a favorite sport?</a></span></br>
+      <input type="radio" name="Q7" id="soccer" value="soccer">
+      <label for="soccer">soccer</label>
+      <br>
+      <input type="radio" name="Q7" id="football" value="football">
+      <label for="football">football</label>
+      <br>
+      <input type="radio" name="Q7" id="swim" value="swim">
+      <label for="swim">swim</label>
+      <br>
+      <input type="radio" name="Q7" id="golf" value="golf">
+      <label for="golf">golf</label>
+
+      <br><br><span>Q8. <a>Do you have a favorite game?</a></span></br>
+      <input type="radio" name="Q8" id="simcity" value="simcity">
+      <label for="simcity">simcity</label>
+      <br>
+      <input type="radio" name="Q8" id="fortnite" value="fortnite">
+      <label for="fortnite">fortnite</label>
+      <br>
+      <input type="radio" name="Q8" id="tekken" value="tekken">
+      <label for="tekken">tekken</label>
+      <br>
+      <input type="radio" name="Q8" id="none" value="none">
+      <label for="none">none</label>
+
+      <br><br><span>Q9. <a>Favorite food?</a></span></br>
+      <input type="radio" name="Q9" id="pizza" value="pizza">
+      <label for="pizza">pizza</label>
+      <br>
+      <input type="radio" name="Q9" id="cake" value="cake">
+      <label for="cake">cake</label>
+      <br>
+      <input type="radio" name="Q9" id="salad" value="salad">
+      <label for="salad">salad</label>
+      <br>
+      <input type="radio" name="Q9" id="chicken" value="chicken">
+      <label for="chicken">chicken</label>
+
+      <br><br><span>Q10. <a>What is your personality type? Type in below.</a></span></br>
+      <span style="margin-left: 50px">Type: <input type="text" name="Q10" id="userInput"></span>
+      <br><br>
+
+    </blockquote>
+
+    <input type="button" id="quizButton" value="SUBMIT">
+
+  </form>
+  </div>
+  <br>
+  <div class="result" id="result">
+      <h1 id="heading1">Summary</h1>
+      <hr>
+      <p id="resultArea">[LOADING SUMMARY RESULTS......]</p>
+  </div>
+
+  </div>
+  </div>
+
+  <script>
+  // gain access to the quiz button and wait for a click
+  /*var Q1 = ['white','red','blue','green'];
+  var Q2 = ['dog','cat','cow','rabbit'];
+  var Q3 = ['spirals','lines','circles','fractals'];
+  var Q4 = ['math','english','art','science'];
+  var Q5 = ['square','triangle','polygon','none'];
+  var Q6 = ['mountains','parks','deserts','rainforests'];
+  var Q7 = ['soccer','football','swim','golf'];
+  var Q8 = ['simcity','fortnite','tekken','none'];
+  var Q9 = ['pizza','cake','salad','chicken']; */
+  //none is = you didn't like any #question (ex. games)
+  //question is just stored
+
+  function init() {
+		var button = document.getElementById('quizButton');
+		button.onclick = checkQuiz;
+	}
+
+  function checkQuiz() {
+    console.log("Button pressed!");
+    var checked;
+    var answer = new Array(10);
+
+    for(var i=0; i<10; i++){
+
+      if (i<9){
+
+          var inputs = document.getElementsByName('Q'+(i+1));
+          for(var j=0; j<inputs.length; j++){
+            if(inputs[j].checked){
+              checked = inputs[j].value;
+              break;
+            }
+          }
+          //if(!checked)
+          //  alert('Please answer the questions!');
+
+          answer[i] = checked;
+          console.log(checked);
+
+      }
+      else {
+
+          answer[i] = document.getElementById("userInput").value;
+          if(!answer[i])
+              answer[i] = 'undefined';
+      }
+    }
+
+    displayAnswers(answer);
+    for(var i=0; i<10; i++){
+      console.log(answer[i]);
+    }
+
+  }
+
+  function displayAnswers(answer){
+
+    //var image1 = document.createElement('img1');
+		//image1.className = 'color';
+    var determine = [0,0,0];
+    var ptype = ['energetic', 'calm', 'curious'];
+    var image = document.createElement('img');
+    image.className = 'animal';
+
+
+      document.getElementById("result").style.background = answer[0];
+
+      switch(answer[5]){
+        //document.getElementById("iscroll").style.backgroundRepeat = "no-repeat";
+        //
+        case 'mountains':
+          document.getElementById("iscroll").style.background ="url(https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg)";
+          document.getElementById("iscroll").style.backgroundRepeat = "no-repeat";
+          break;
+        case 'parks':
+          document.getElementById("iscroll").style.background ="url(http://bestseattleparks.com/wp-content/uploads/2010/01/IMG_0412.JPG)";
+          document.getElementById("iscroll").style.backgroundRepeat = "no-repeat";
+          break;
+        case 'deserts':
+          document.getElementById("iscroll").style.background ="url(http://images.amcnetworks.com/amctvasia.com/wp-content/uploads/2016/02/rsz_desertlol.jpg)";
+          document.getElementById("iscroll").style.backgroundRepeat = "no-repeat";
+          break;
+        case 'rainforests':
+          document.getElementById("iscroll").style.background ="url(https://s-i.huffpost.com/gen/1350031/images/o-RAINFOREST-facebook.jpg)";
+          document.getElementById("iscroll").style.backgroundRepeat = "no-repeat";
+          break;
+      }
+
+
+      switch(answer[0]){
+        case 'white':
+          determine[0]++;
+          break;
+        case 'red':
+          determine[0]++;
+          break;
+        case 'blue':
+          determine[1]++;
+          break;
+        case 'green':
+          determine[2]++;
+          break;
+      }
+
+      switch(answer[1]){
+        case 'dog':
+          image.src ='https://cbsnews2.cbsistatic.com/hub/i/r/2015/02/27/dc63bf50-05ee-4733-9217-4718ee9c81fe/resize/620x465/cb60f988990627112be9a03525f66c34/labrador-retriever1istock.jpg';
+          image.style.width = '550px';
+          image.style.height = '550px';
+          determine[0]++;
+          break;
+        case 'cat':
+          image.src ='http://www.catster.com/wp-content/uploads/2017/08/Pixiebob-cat.jpg';
+          image.style.width = '550px';
+          image.style.height = '550px';
+          determine[1]++;
+          break;
+        case 'cow':
+          image.src ='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Cow_female_black_white.jpg/220px-Cow_female_black_white.jpg';
+          image.style.width = '550px';
+          image.style.height = '550px';
+          determine[1]++;
+          break;
+        case 'rabbit':
+          image.src ='https://www.omlet.co.uk/images/originals/rabbit-health-symptoms.jpg';
+          image.style.width = '550px';
+          image.style.height = '550px';
+          determine[2]++;
+          break;
+      }
+
+      switch(answer[3]){
+        case 'math':
+          determine[1]++;
+          break;
+        case 'english':
+          determine[0]++;
+          break;
+        case 'art':
+          determine[2]++;
+          break;
+        case 'science':
+          determine[2]++;
+          break;
+      }
+      //image10.src ='';
+
+    var highestpoint = Math.max.apply(Math, determine);
+    var ptypeperson = ptype[determine.indexOf(highestpoint)];
+    console.log(ptypeperson);
+
+    var source = document.getElementById('resultArea');
+    source.innerHTML = '';
+
+    var text = 'You like the color ' + answer[0] + '. Loved animals such as a '
+    +answer[1]+ '. When it comes to drawing you would draw ' +answer[2]+
+    ' everywhere. Your favorite subject is ' +answer[3]+
+    ', prehaps that is why you like the shape ' +answer[4]+
+    '. If you were to go camping you would go to the ' +answer[5]+
+    '. You loved to play ' +answer[6]+ ' and videogames like ' +answer[7]+
+    '. You loved to eat ' +answer[8]+ ' all the time. The type of person you think you are is ' +answer[9]+
+     '. In the end, you are a ' +ptypeperson+ " person.";
+    source.appendChild(image);
+
+    if(answer[0]!='white'){
+      source.innerHTML += '<br>' + text.fontcolor("white").bold();
+    }
+    else {
+      source.innerHTML += '<br>' + text.fontcolor("black").bold();
+      document.getElementById("heading1").style.color = "black";
+    }
+  }
+
+  window.onload = init;
+  </script>
+</body>
+</html>
